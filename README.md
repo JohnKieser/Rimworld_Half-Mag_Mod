@@ -17,13 +17,12 @@ Cheshyre's music can be supported on: [YouTube](https://www.youtube.com/channel/
 
 Locknar's music can be supported on:  [YouTube](https://www.youtube.com/user/iamlocknar/featured), [Instagram](https://www.instagram.com/iamlocknar/), [Beatport](https://cheshyre.bandcamp.com/), [Soundcloud](https://soundcloud.com/locknar), [Spotify](https://open.spotify.com/artist/6gyFIVpuI2tBHrwbhLSpng?si=mMo-DPnsSyOfcUg6ldZnrQ&nd=1&dlsi=6f5d2278c43f41c7)
 
-Swain has a funny [twitter](https://x.com/thatolswain?lang=en)
+Swain has a funny [twitter](https://x.com/thatolswain?lang=en) 
 
-MADNESS: Project Nexus™ is a trademark of GIBBING TREE, LLC. All rights reserved.
-
-
-
+----
 
 This code is meant to mod the PC version of the game Rimworld which is developed by [Ludeon Studios](https://ludeon.com/blog/) founded by [Tynan Sylvestor](https://tynansylvester.com/)
+
+MADNESS: Project Nexus™ is a trademark of GIBBING TREE, LLC. All rights reserved.
 
 RimWorld™ is a trademark of LUDEON STUDIOS INC. All rights reserved.
