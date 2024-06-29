@@ -1,0 +1,39 @@
+
+<LanguageData>
+
+    <MagHead.label>head</MagHead.label>
+    <MagSkull.label>reinforced skull</MagSkull.label>
+    <MagBrain.label>brain</MagBrain.label>
+    <MagEye.label>eye</MagEye.label>
+    <MagEar.label>ear</MagEar.label>
+    <MagNose.label>nose</MagNose.label>
+    <MagJaw.label>jaw</MagJaw.label>
+    <MagNeck.label>neck</MagNeck.label>
+    <MagRibcage.label>reinforced ribcage</MagRibcage.label>
+    <MagSpine.label>spine</MagSpine.label>
+    <MagLeg.label>leg</MagLeg.label>
+    <MagFoot.label>foot</MagFoot.label>
+    <MagTongue.label>tongue</MagTongue.label>
+    <MagHeart.label>heart</MagHeart.label>
+    <MagLung.label>lung</MagLung.label>
+    <MagKidney.label>kidney</MagKidney.label>
+    <MagLiver.label>liver</MagLiver.label>
+    <MagStomach.label>stomach</MagStomach.label>
+    <MagTorso.label>torso</MagTorso.label>
+    <MagShoulder.label>shoulder</MagShoulder.label>
+    <MagArm.label>arm</MagArm.label>
+    <MagHand.label>hand</MagHand.label>
+    <MagFinger.label>finger</MagFinger.label>
+    <Waist.label>waist</Waist.label>
+    <MagToe.label>toe</MagToe.label>
+
+    <MagClavicle.label>clavicle</MagClavicle.label>
+    <MagSternum.label>sternum</MagSternum.label>
+    <MagHumerus.label>humerus</MagHumerus.label>
+    <MagRadius.label>radius</MagRadius.label>
+    <MagPelvis.label>pelvis</MagPelvis.label>
+    <MagFemur.label>femur</MagFemur.label>
+    <MagTibia.label>tibia</MagTibia.label>
+
+
+</LanguageData>

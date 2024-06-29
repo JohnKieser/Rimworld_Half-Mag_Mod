@@ -1,0 +1,14 @@
+
+<LanguageData>
+    <MCHF_SettingsCategory>Madness Combat Half-Mag Mod</MCHF_SettingsCategory>
+
+    <MCHF_AnimalTabSettingEnable>Half-Mags show on Animal Tab</MCHF_AnimalTabSettingEnable>
+    <MCHF_AnimalTabSettingToolTip>could improve performance in large colonies</MCHF_AnimalTabSettingToolTip>
+
+    <MCHF_ColonistBarSettingEnable>Half-Mags show on Colonist Bar</MCHF_ColonistBarSettingEnable>
+    <MCHF_ColonistBarSettingToolTip>reshuffle colonist bar for changes to take effect</MCHF_ColonistBarSettingToolTip>
+
+    <MCHF_HalfMagIntroSettingEnable>Enable introductory one-time Half-Mag incident</MCHF_HalfMagIntroSettingEnable>
+    <MCHF_HalfMagIntroSettingToolTip>a single Half-Mag raids your colony in 10 days</MCHF_HalfMagIntroSettingToolTip>
+
+</LanguageData>
