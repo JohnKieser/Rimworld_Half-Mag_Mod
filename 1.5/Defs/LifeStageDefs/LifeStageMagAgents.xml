@@ -1,0 +1,10 @@
+
+<Defs>
+
+  <LifeStageDef>
+    <defName>MagAgentGrown</defName>
+    <label>adult</label>
+    <visible>false</visible>
+  </LifeStageDef>
+
+  </Defs>

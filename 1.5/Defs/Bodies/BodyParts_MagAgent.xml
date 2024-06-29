@@ -1,0 +1,444 @@
+
+<Defs>
+<!-- 
+  
+  made for health scale 3x
+
+  .20+ AP needed to ignore ribcage/skull (organic armor)
+
+
+                        ##Spacer weapons##
+  charge lance - 30 dmg || pen: ✔ || can-one-shot: ✔
+
+  charge rifle - 15 dmg || pen: ✔ || can-one-shot: X
+
+                        ##Good Industrial weapons## 
+                        (masterwork can often pen organic armor)
+  assualt rifle - 11 dmg || pen: X || can-one-shot: X
+
+  sniper rifle - 25 dmg || pen: ✔ || can-one-shot: X (prolly if masterwork+)
+
+  heavy smg - 12 dmg || pen: X || can-one-shot: X
+
+  chain shotgun - 18 dmg || pen: X || can-one-shot: X
+
+  Minigun - 10 dmg || pen: x || can-one-shot: x
+
+                        ##Shit-decent Industrial weapons## 
+                        (masterwork-Legendary can pen organic armor)
+
+  revolver - 12 dmg || pen: X || can-one-shot: X
+
+  bolt action - 18 dmg || pen: ✔ || can-one-shot: X
+
+  pump shotgun - 18 dmg || pen: X || can-one-shot: X
+
+  auto-pistol - 10 dmg || pen: X(surprisingly AP of 15) || can-one-shot: X
+
+  machine pistol - 6 dmg || pen: X(lowest AP of 9) || can-one-shot: X
+
+
+-->
+  <BodyPartDef>
+    <defName>MagHead</defName>
+    <label>head</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>.01</bleedRate>
+    <executionPartPriority>500</executionPartPriority>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagSkull</defName>
+    <label>mag skull</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>true</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagBrain</defName>
+    <label>brain</label>
+    <hitPoints>7</hitPoints>
+    <bleedRate>7</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagEye</defName>
+    <label>eye</label>
+    <hitPoints>10</hitPoints>
+    <bleedRate>.5</bleedRate>
+    <delicate>false</delicate>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <socketed>true</socketed>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagEar</defName>
+    <label>ear</label>
+    <hitPoints>10</hitPoints>
+    <bleedRate>.2</bleedRate>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagNose</defName>
+    <label>nose</label>
+    <hitPoints>12</hitPoints>
+    <bleedRate>.2</bleedRate>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagJaw</defName>
+    <label>jaw</label>
+    <hitPoints>20</hitPoints>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <bleedRate>2</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagNeck</defName>
+    <label>neck</label>
+    <hitPoints>20</hitPoints>
+    <bleedRate>1.5</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>1000</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagRibcage</defName>
+    <label>reinforced ribcage</label>
+    <hitPoints>35</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>true</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagSpine</defName>
+    <label>spine</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <tags>
+      <li>Spine</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagLeg</defName>
+    <label>leg</label>
+    <hitPoints>20</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>0.001</bleedRate>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagFoot</defName>
+    <label>foot</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>0.01</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagTongue</defName>
+    <label>tongue</label>
+    <skinCovered>true</skinCovered>
+    <bleedRate>1.5</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <forceAlwaysRemovable>true</forceAlwaysRemovable>
+    <removeRecipeLabelOverride>remove</removeRecipeLabelOverride>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagHeart</defName>
+    <label>heart</label>
+    <hitPoints>10</hitPoints>
+    <bleedRate>10</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
+    <spawnThingOnRemoved>Heart</spawnThingOnRemoved>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagLung</defName>
+    <label>lung</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>3</bleedRate>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagKidney</defName>
+    <label>kidney</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>3</bleedRate>
+    <tags>
+      <li>BloodFiltrationKidney</li>
+    </tags>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagLiver</defName>
+    <label>liver</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>3</bleedRate>
+    <tags>
+      <li>BloodFiltrationLiver</li>
+      <li>MetabolismSource</li>
+    </tags>
+    <spawnThingOnRemoved>Liver</spawnThingOnRemoved>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagStomach</defName>
+    <label>stomach</label>
+    <hitPoints>12</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>3</bleedRate>
+    <tags>
+      <li>MetabolismSource</li>
+    </tags>
+  </BodyPartDef>
+
+
+  <BodyPartDef>
+    <defName>MagTorso</defName>
+    <label>torso</label>
+    <hitPoints>20</hitPoints>
+    <skinCovered>true</skinCovered>
+    <bleedRate>.001</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagShoulder</defName>
+    <label>shoulder</label>
+    <hitPoints>25</hitPoints>
+    <bleedRate>.01</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagArm</defName>
+    <label>arm</label>
+    <hitPoints>20</hitPoints>
+    <bleedRate>.001</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbCore</li>
+      <li>Mirrored</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagHand</defName>
+    <label>hand</label>
+    <hitPoints>10</hitPoints>
+    <bleedRate>.0001</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagFinger</defName>
+    <label>finger</label>
+    <hitPoints>5</hitPoints>
+    <bleedRate>.0001</bleedRate>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbDigit</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Waist</defName>
+    <label>utility slot</label>
+    <conceptual>true</conceptual>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagToe</defName>
+    <label>toe</label>
+    <hitPoints>10</hitPoints>
+    <bleedRate>.0001</bleedRate>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbDigit</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+  
+  <!-- Bones -->
+
+  <BodyPartDef>
+    <defName>MagClavicle</defName>
+    <label>clavicle</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagSternum</defName>
+    <label>sternum</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>true</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagHumerus</defName>
+    <label>humerus</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagRadius</defName>
+    <label>radius</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagPelvis</defName>
+    <label>pelvis</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>Pelvis</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagFemur</defName>
+    <label>femur</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MagTibia</defName>
+    <label>tibia</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

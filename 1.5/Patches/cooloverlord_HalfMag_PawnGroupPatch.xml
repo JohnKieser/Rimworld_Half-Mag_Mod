@@ -1,0 +1,80 @@
+
+<Patch>
+<!-- normal fights-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+        <value>
+          <HalfMagPirate>6</HalfMagPirate>
+        </value>
+    </Operation>
+
+    <!-- normal outlander raid-->
+    <Operation Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+      <value>
+        <HalfMagTown>8</HalfMagTown>
+      </value>
+  </Operation>
+
+
+<!-- normal melee only-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[2]/options</xpath>
+        <value>
+          <HalfMagPirate>3</HalfMagPirate>
+        </value>
+      </Operation>
+<!-- caravan -->
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+        <value>
+          <HalfMagTown>5</HalfMagTown>
+        </value>
+    </Operation>
+
+<!-- normal fights with alot more explosives-->
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[4]/options</xpath>
+        <value>
+          <HalfMagPirate>3</HalfMagPirate>
+        </value>
+      </Operation>
+
+<!-- base defense-->
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[7]/options</xpath>
+        <value>
+          <HalfMagPirate>10</HalfMagPirate>
+        </value>
+      </Operation>
+
+<!-- sold by orbital traders--> 
+
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+  <value>
+    <li Class="MCHF.StockGenerator_HalfMag">
+      <countRange>1~6</countRange>
+    </li>
+  </value>
+</Operation>
+
+
+<!-- half-mag incident that happens only once --> 
+
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+  <value>
+    <li Class="StorytellerCompProperties_SingleOnceFixed">
+      <fireAfterDaysPassed>10</fireAfterDaysPassed>
+      <minColonistCount>1</minColonistCount>
+      <incident>SingleHalfMagAssault</incident>
+      <skipIfOnExtremeBiome>False</skipIfOnExtremeBiome>
+      <allowedTargetTags>
+        <li>Map_PlayerHome</li>
+      </allowedTargetTags>
+    </li>
+  </value>
+</Operation>
+
+</Patch>

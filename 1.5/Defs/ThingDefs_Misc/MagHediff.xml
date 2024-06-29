@@ -1,0 +1,66 @@
+<Defs>
+
+  <!-- I really don't like making huge ass "race" hediffs. When I make my next mod with HAR I think it'll be mucher easier to make this stuff inherit to a race  
+       
+      Half-Mags(and its larger cousins/brothers) in Rimworld terms are like crude but fully bionic humanoids. The hediff here gives them buffs
+      to help them aggressivly speed walk through a hail of bullets like some John Wick terminator with little slow down. 
+      There's also some other less combat related buffs for when the Half-Mag is just an ally so he's functionally like a ghoul in its role 
+    -->
+    <HediffDef>
+        <defName>MagHediff</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Mag Agent</label>
+        <description>The Mag Agent is bio-engineered to endure what most humans struggle with. Disease, non-fatal organ loss, and pain are only temporary distractions, but tasks not directly related to combat were also seen as distractions by its creators. Mag Agents are only capable of the most basic physical labor and lack much freewill, meaning they must be directly ordered to perform most simple tasks</description>
+        <isBad>false</isBad>
+        <makesAlert>false</makesAlert>
+          <stages>
+            <li>
+              <!-- in my next mod, he'll be able to clean and cook(very shitty food) -->
+              <disabledWorkTags>
+                <li>Constructing</li>
+                <li>PlantWork</li>
+                <li>Cooking</li>
+                <li>Crafting</li>
+                <li>Artistic</li>
+                <li>Animals</li>
+                <li>Intellectual</li>
+                <li>Caring</li>
+                <li>Cleaning</li>
+              </disabledWorkTags>
+            <!-- very long lasting body but might change this-->
+              <makeImmuneTo>
+                <li>Carcinoma</li>
+                <li>HeartArteryBlockage</li>
+                <li>Asthma</li>
+                <li>Alzheimers</li>
+                <li>Dementia</li>
+                <li>Cataract</li>
+                <li>Frail</li>
+                <li>BadBack</li>
+                <li>Blindness</li>
+                <li>HearingLoss</li>
+                <li>HeartAttack</li>
+                <li>OrganDecay</li>
+              </makeImmuneTo>
+              <!-- the cap and stat buffs are more to serve as slowdown buffers in lieu of an easier way to make damage to limbs and pain affect his movement less-->
+              <painFactor>0.2</painFactor>
+              <capMods>
+                <li>
+                  <capacity>Consciousness</capacity> 
+                  <offset>0.20</offset>
+                </li>                
+                <li>
+                  <capacity>Moving</capacity>
+                  <offset>0.10</offset>
+                </li>
+              </capMods>
+                <statOffsets>
+                  <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+                  <InjuryHealingFactor>0.25</InjuryHealingFactor> 
+                </statOffsets>   
+
+            </li>
+          </stages>
+      </HediffDef>
+
+</Defs>

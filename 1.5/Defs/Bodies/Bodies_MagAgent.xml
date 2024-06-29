@@ -1,0 +1,614 @@
+
+
+<Defs>
+
+
+  <BodyDef>
+    <defName>MagAgentBody</defName>
+    <label>mag Agent</label>
+    <corePart>
+      <def>MagTorso</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>MagRibcage</def>
+          <coverage>0.001</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagSternum</def>
+          <coverage>0.01</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagPelvis</def>
+          <coverage>0.01</coverage>
+          <height>Bottom</height>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagSpine</def>
+          <coverage>0.005</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagStomach</def>
+          <coverage>0.10</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagHeart</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagLung</def>
+          <customLabel>left lung</customLabel>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagLung</def>
+          <customLabel>right lung</customLabel>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagKidney</def>
+          <customLabel>left kidney</customLabel>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagKidney</def>
+          <customLabel>right kidney</customLabel>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagLiver</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagNeck</def>
+          <coverage>0.150</coverage>
+          <height>Top</height>
+          <groups>
+            <li>Neck</li>
+          </groups>
+          <parts>
+            <li>
+              <def>MagHead</def>
+              <coverage>0.80</coverage>
+              <groups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MagSkull</def>
+                  <coverage>0.001</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>Eyes</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagBrain</def>
+                  <coverage>0.02</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>Eyes</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagEye</def>
+                  <customLabel>left eye</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                    <li>Eyes</li>
+                  </groups>
+                  <woundAnchorTag>LeftEye</woundAnchorTag>
+                  <visibleHediffRots>
+                    <li>South</li>
+                    <li>West</li>
+                  </visibleHediffRots>
+                </li>
+                <li>
+                  <def>MagEye</def>
+                  <customLabel>right eye</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                    <li>Eyes</li>
+                  </groups>
+                  <woundAnchorTag>RightEye</woundAnchorTag>
+                  <visibleHediffRots>
+                    <li>South</li>
+                    <li>East</li>
+                  </visibleHediffRots>
+                </li>
+                <li>
+                  <def>MagEar</def>
+                  <customLabel>left ear</customLabel>
+                  <coverage>0.07</coverage>
+
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagEar</def>
+                  <customLabel>right ear</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagNose</def>
+                  <coverage>0.10</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagJaw</def>
+                  <coverage>0.15</coverage>
+                  <groups>
+                    <li>Teeth</li>
+                    <li>FullHead</li>
+                    <li>Mouth</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>MagTongue</def>
+                      <coverage>0.3</coverage>
+                      <depth>Inside</depth>
+                      <groups>
+                        <li>FullHead</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MagShoulder</def>
+          <customLabel>left shoulder</customLabel>
+          <coverage>0.10</coverage>
+          <woundAnchorTag>LeftShoulder</woundAnchorTag>
+
+          <groups>
+            <li>Shoulders</li>
+          </groups>
+          <parts>
+            <li>
+              <def>MagClavicle</def>
+              <customLabel>left clavicle</customLabel>
+              <coverage>0.09</coverage>
+              <height>Top</height>
+              <depth>Inside</depth>
+
+              <groups>
+                <li>Torso</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagArm</def>
+              <customLabel>left arm</customLabel>
+              <coverage>0.77</coverage>
+
+              <groups>
+                <li>Arms</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MagHumerus</def>
+                  <customLabel>left humerus</customLabel>
+                  <coverage>0.1</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>Arms</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagRadius</def>
+                  <customLabel>left radius</customLabel>
+                  <coverage>0.1</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>Arms</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagHand</def>
+                  <customLabel>left hand</customLabel>
+                  <coverage>0.14</coverage>
+                  <height>Bottom</height>
+
+                  <groups>
+                    <li>Hands</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>left pinky</customLabel>
+                      <coverage>0.06</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>left ring finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>left middle finger</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                        <li>MiddleFingers</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>left index finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>left thumb</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MagShoulder</def>
+          <customLabel>right shoulder</customLabel>
+          <coverage>0.10</coverage>
+          <woundAnchorTag>RightShoulder</woundAnchorTag>
+          <groups>
+            <li>Shoulders</li>
+          </groups>
+          <parts>
+            <li>
+              <def>MagClavicle</def>
+              <customLabel>right clavicle</customLabel>
+              <coverage>0.09</coverage>
+              <height>Top</height>
+              <depth>Inside</depth>
+              <groups>
+                <li>Torso</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagArm</def>
+              <customLabel>right arm</customLabel>
+              <coverage>0.77</coverage>
+              <groups>
+                <li>Arms</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MagHumerus</def>
+                  <customLabel>right humerus</customLabel>
+                  <coverage>0.1</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>Arms</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagRadius</def>
+                  <customLabel>right radius</customLabel>
+                  <coverage>0.1</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>Arms</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagHand</def>
+                  <customLabel>right hand</customLabel>
+                  <coverage>0.14</coverage>
+                  <height>Bottom</height>
+                  <groups>
+                    <li>Hands</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>right pinky</customLabel>
+                      <coverage>0.06</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>right ring finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>right middle finger</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                        <li>MiddleFingers</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>right index finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MagFinger</def>
+                      <customLabel>right thumb</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Waist</def>
+          <coverage>0</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Waist</li>
+          </groups>
+        </li>
+        <li>
+          <def>MagLeg</def>
+          <customLabel>left leg</customLabel>
+          <coverage>0.05</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <woundAnchorTag>LeftLeg</woundAnchorTag>
+
+          <parts>
+            <li>
+              <def>MagFemur</def>
+              <customLabel>left femur</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>Legs</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagTibia</def>
+              <customLabel>left tibia</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>Legs</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagFoot</def>
+              <customLabel>left foot</customLabel>
+              <coverage>0.3</coverage>
+
+              <groups>
+                <li>Feet</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>left little toe</customLabel>
+                  <coverage>0.06</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>left fourth toe</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>left middle toe</customLabel>
+                  <coverage>0.08</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>left second toe</customLabel>
+                  <coverage>0.09</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>left big toe</customLabel>
+                  <coverage>0.09</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MagLeg</def>
+          <customLabel>right leg</customLabel>
+          <coverage>0.05</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <woundAnchorTag>RightLeg</woundAnchorTag>
+          <parts>
+            <li>
+              <def>MagFemur</def>
+              <customLabel>right femur</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>Legs</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagTibia</def>
+              <customLabel>right tibia</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>Legs</li>
+              </groups>
+            </li>
+            <li>
+              <def>MagFoot</def>
+              <customLabel>right foot</customLabel>
+              <coverage>0.3</coverage>
+              <groups>
+                <li>Feet</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>right little toe</customLabel>
+                  <coverage>0.06</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>right fourth toe</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>right middle toe</customLabel>
+                  <coverage>0.08</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>right second toe</customLabel>
+                  <coverage>0.09</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MagToe</def>
+                  <customLabel>right big toe</customLabel>
+                  <coverage>0.09</coverage>
+                  <groups>
+                    <li>Feet</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  
+</Defs>

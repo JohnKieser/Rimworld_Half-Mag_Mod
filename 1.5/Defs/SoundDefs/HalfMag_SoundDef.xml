@@ -1,0 +1,46 @@
+
+<!-- fun fact! these are taken directly from Madness Project Nexus. They're the charge-up sound for any charged attack
+     I thought these were extremly good and fit really well in Rimworld, so I just used em instead of making my own which would still be easy to do
+     I am not exactly sure which member of MPN's team made this but I am pretty sure it was Locknar who is stated to be the sole sound designer -->
+<Defs>
+
+
+    <SoundDef>
+        <defName>HalfMag_AbilityWarmUp_CastStart</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>3</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+          <li>
+            <grains>
+              <li Class="AudioGrain_Clip">
+                <clipPath>PN2ChargedAttackLevel1</clipPath>
+              </li>
+            </grains>
+            <volumeRange>30</volumeRange>
+            <distRange>30~40</distRange>
+          </li>
+        </subSounds>
+      </SoundDef>
+
+      <SoundDef>
+        <defName>HalfMag_AbilityWarmUp_CastEnd</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>3</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+          <li>
+            <grains>
+              <li Class="AudioGrain_Clip">
+                <clipPath>PN2ChargedAttackLevel2</clipPath>
+              </li>
+            </grains>
+            <volumeRange>40</volumeRange>
+            <distRange>50~60</distRange>
+          </li>
+        </subSounds>
+      </SoundDef>
+    
+
+    
+</Defs>

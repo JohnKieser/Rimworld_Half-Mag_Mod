@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+    <name>Madness Combat: Half-Mag</name>
+<description>
+<![CDATA[
+This is a Madness Combat inspired mod that adds a new enemy/ally to the game: The Half-Mag.
+
+The Half-Mag is a bear sized humanoid that is mass produced and sold by unknown powers to the rimworlds. They are built for combat, boasting incredible resistance to small arms fire and insane strength. Their main selling point is their ability to harness that strength in an explosive dash.
+
+Half-Mags will appear in pirate raids, acting as tanky melee stormtroopers. From the early game, they'll act as mini-bosses, but from the mid-game on, they'll be a common threat that will add some variety to most raids.
+
+You can also hire your own Half-Mags from orbital Combat Suppliers! They are fully draftable but won't do much labor besides hauling. They can also equip weapons(even guns), but their fists are probably better than most early-mid game weapons. Their full potentional lies in if you give them something like a Zeushammer combined with their dash attack!        
+
+The main goal of this mod is to get my feet wet in Rimworld modding, but to also add a simple thing to the game that can act as an engaging enemy without being too OP or changing much of the game's rules. The Half-Mag is also meant to be somewhat competitive to colony Ghouls, but as a more balanced alternative ironically enough. The only area Half-Mags MIGHT beat ghouls in, is in DPS since they can hold weapons, but nothing can really beat kitted out ghouls with .19 DMG reduction and 30+ DPS.
+
+
+<color=##0000FF><size=18>Compatibility</size></color>
+
+This mod should be compatible with most other mods! Let me know if issues arise with mods that you believe should be compatible.
+
+<b>only needs Harmony</b> 
+
+
+<color=##0000FF><size=24>MOD CREDITS</size></color>
+
+<b>Me</b> (Main creator of this mod. I did the XML/C#) https://steamcommunity.com/id/cooloverlord/
+discord: JohnKieser/johnkieser.
+
+<b>Fiendakko/lefaux</b> (commissioned artist that made the Half-Mag sprites) https://steamcommunity.com/id/Foxtrotzero 
+discord: Fiendakko/lefaux22. 
+ 
+ 
+<color=##0000FF><size=24>OTHER IMPORTANT CREDITS</size></color>
+ 
+This mod directly uses ideas/assets from the PC game Madness: Project Nexus you can find it here -> https://store.steampowered.com/app/488860/MADNESS_Project_Nexus/ made by Gibbing Tree LLC https://g.co/kgs/wsegVEk
+
+* The Half-Mag is from Madness: Project Nexus (specifically from the arena mode level Fast Track) https://madnesscombat.fandom.com/wiki/Half_Mag
+
+* The Half-Mag charge up sound SFX is directly taken from Madness: Project Nexus
+
+* Lore fluff in the mod is also loosely based off Madness: Project Nexus lore  
+
+
+<b>PEOPLE WHO MADE PROJECT NEXUS THAT YOU SHOULD CHECK OUT!!</b> 
+
+<b>Krinkles</b>(artist & OG creator of Madness Combat) https://www.krinkels.net/ 
+
+<b>TheSwain</b>(programmer for MPN) https://the-swain.newgrounds.com/ 
+
+<b>Cheshyre</b>(musician) https://hyperfollow.com/Cheshyre  
+
+<b>Locknar</b>(musician & I heard he did most of the SFX maybe even the one I stole!) https://www.locknar.com/
+
+
+You can watch Madness Combat right here! https://youtube.com/playlist?list=PL4F761764995C5F15&si=fVh-vsA2CDIbKHLm
+
+]]>
+</description>
+    <author>cooloverlord</author>
+    <modVersion IgnoreIfNoMatchingField="True">0.5</modVersion>
+    <packageId>cooloverlord.madnesscombathalfmag</packageId>
+    <supportedVersions>
+		<li>1.5</li>
+    </supportedVersions>
+    <modDependencies>
+      <li>
+        <packageId>brrainz.harmony</packageId>
+        <displayName>Harmony</displayName>
+        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+        <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+      </li>
+    </modDependencies>
+    <loadAfter>
+      <li>Ludeon.RimWorld</li>
+      <li>Ludeon.RimWorld.Royalty</li>
+      <li>Ludeon.RimWorld.Biotech</li>
+      <li>Ludeon.RimWorld.Anomaly</li>
+      <li>brrainz.harmony</li>
+      <li>erdelf.HumanoidAlienRaces</li>
+      <li>OskarPotocki.VanillaFactionsExpanded.Core</li>      
+    </loadAfter>
+</ModMetaData>

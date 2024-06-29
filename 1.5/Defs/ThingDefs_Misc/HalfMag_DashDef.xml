@@ -1,0 +1,27 @@
+<Defs>
+
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>PawnDasher</defName>
+		<label>dashing</label>
+		<thingClass>MCHF.PawnDasher</thingClass>
+		<useHitPoints>false</useHitPoints>
+		<drawOffscreen>true</drawOffscreen>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Skyfaller</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<pawnFlyer>
+		  <flightDurationMin>0.01</flightDurationMin>
+		  <flightSpeed>100</flightSpeed>			<!-- we are traveling super fast -->
+		  <workerClass>PawnFlyerWorker</workerClass>
+		  <heightFactor>0</heightFactor>
+		  <progressCurve>
+			<points>
+			  <li>(0, 0)</li>
+			  <li>(0.5, 0.5)</li> 
+			  <li>(1, 1)</li>
+			</points>
+		  </progressCurve>
+		</pawnFlyer>
+	  </ThingDef>
+  
+  </Defs>
