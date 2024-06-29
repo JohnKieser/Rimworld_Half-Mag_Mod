@@ -1,5 +1,5 @@
 # Rimworld_Half-Mag_Mod
-A Madness Combat inspired Rimworld mod. The mod conceptually is super simple, but its implementation was way more complicated than I expected. It adds the Half-Mag Agent enemy from Madness: Project Nexus . This is my very first mod for any video game too!!!!
+A Madness Combat inspired Rimworld mod. The mod seems super simple, but its implementation was way more complicated than I expected. It adds the Half-Mag Agent enemy from Madness: Project Nexus. This is my very first mod for any video game too!!!!
 
 ## Credits
 
