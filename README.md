@@ -3,10 +3,12 @@ A Madness Combat inspired Rimworld mod. The mod conceptually is super simple, bu
 
 ## Credits
 
-[Me](https://steamcommunity.com/id/cooloverlord/):I am the creator of mod. I did the XML, C#, and bad looking icons
+[Me](https://steamcommunity.com/id/cooloverlord/): I am the creator of mod. I did the XML, C#, and bad looking icons
+
 discord: JohnKieser/johnkieser.
 
 [Fiendakko/lefaux](https://steamcommunity.com/id/Foxtrotzero): commissioned artist that made the Half-Mag sprites. You can see what other amazing work he did in the link to his steam page
+
 discord: Fiendakko/lefaux22.
 
 This mod directly uses ideas/assets from the PC game [Madness: Project Nexus](https://store.steampowered.com/app/488860/MADNESS_Project_Nexus/)(MPN for short) made by [Gibbing Tree, LLC](https://g.co/kgs/wsegVEk).
