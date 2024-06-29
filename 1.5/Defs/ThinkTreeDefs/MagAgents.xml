@@ -1,0 +1,246 @@
+<!-- unused as I didn't realize that pawns since bio-tech were inherently able to use abilities -->
+<Defs>
+  <ThinkTreeDef>
+    <defName>Abilities_HalfMagDash</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalColonist">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="ThinkNode_ConditionalHasAbility">
+              <ability>HalfMagDash</ability>
+              <subNodes>
+
+                <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                  <minTicksAgo>2000</minTicksAgo>
+                  <subNodes>
+
+
+                  <li Class="ThinkNode_ConditionalUnderCombatPressure">
+                    <maxThreatDistance>30</maxThreatDistance>
+                    <minCloseTargets>1</minCloseTargets>
+                    <subNodes>
+                      <li Class="JobGiver_AIAbilityFight">
+                        <targetAcquireRadius>30</targetAcquireRadius>
+                        <targetKeepRadius>75</targetKeepRadius>
+                        <skipIfCantTargetNow>True</skipIfCantTargetNow>
+                        <ability>HalfMagDash</ability>
+                        <chaseTarget>True</chaseTarget>
+                        <allowTurrets>True</allowTurrets>
+                        <needLOSToAcquireNonPawnTargets>True</needLOSToAcquireNonPawnTargets>
+                      </li>
+                    </subNodes>
+                  </li>
+
+                </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+    
+  
+  
+  <!-- a weird combo of animal and mechanoid thinktrees -->
+  <ThinkTreeDef>
+    <defName>MagAgentAI</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <!-- Keep lying down if we have to -->
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <!-- Do a queued job if possible -->
+            <li Class="ThinkNode_QueuedJob">
+              <inBedOnly>true</inBedOnly>
+            </li>
+
+            <!-- Keep lying down -->
+            <li Class="JobGiver_KeepLyingDown" />
+          </subNodes>
+        </li>
+
+        <!-- Downed -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_ConditionalBurning">
+          <subNodes>
+            <li Class="ThinkNode_Priority">
+              <subNodes>
+                <li Class="ThinkNode_ConditionalIntelligence">
+                  <minIntelligence>ToolUser</minIntelligence>
+                  <subNodes>
+                    <li Class="JobGiver_JumpInWater" />
+                  </subNodes>
+                </li>
+                <li Class="JobGiver_ExtinguishSelf" />
+                </subNodes>
+                </li>
+              </subNodes>
+        </li>
+
+        <!-- Mental state -->
+        <li Class="ThinkNode_ConditionalMentalState">
+          <state>Berserk</state>
+          <subNodes>
+            <li Class="ThinkNode_Priority">
+              <subNodes>
+                <li Class="JobGiver_Berserk" />
+                <li Class="JobGiver_WanderAnywhere">
+                  <maxDanger>Deadly</maxDanger>
+                </li>
+                </subNodes>
+            </li>
+          </subNodes>
+        </li>
+        <!-- leave if factionless(prolly released by player)-->
+        <li Class="ThinkNode_ConditionalHasFaction">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="JobGiver_ExitMapRandom">
+              <defaultLocomotion>Walk</defaultLocomotion>
+            </li>
+          </subNodes>
+        </li>
+        
+
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" />
+
+        <!-- Wait if drafted -->
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>DraftedOrder</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_MoveToStandable" />
+                <li Class="JobGiver_Orders" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Lord -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+
+        <!-- Satisfy basic needs -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>SatisfyBasicNeeds</treeDef>
+        </li>
+
+        
+
+      <!-- Work modes -->
+      <li Class="ThinkNode_ConditionalPlayerControlledColonist">
+        <subNodes>
+          <li Class="JobGiver_SeekAllowedArea" />
+          <li Class="JobGiver_SeekSafeTemperature" />
+
+          <!-- Take care of critical needs (below rescue - so heroic!)-->
+            
+          <li Class="ThinkNode_Tagger">
+            <tagToGive>RestingForMedicalReasons</tagToGive>
+            <subNodes>
+              <li Class="JobGiver_PatientGoToBed" />
+            </subNodes>
+          </li>
+
+
+          <li Class="MCHF.HalfMag_JobGiver_FightFire" />
+          <li Class="JobGiver_Haul" />
+          
+
+          <li Class="JobGiver_AIFightEnemies">
+            <targetAcquireRadius>65</targetAcquireRadius>
+            <targetKeepRadius>72</targetKeepRadius>
+
+            
+
+
+          </li>
+        </subNodes>
+      </li>
+
+        
+
+        <!-- Idle player mech -->
+        <li Class="ThinkNode_ConditionalPlayerControlledColonist">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Idle</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_WanderColony">
+                  <maxDanger>None</maxDanger>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Idle -->
+        <li Class="ThinkNode_Tagger">
+          <tagToGive>Idle</tagToGive>
+          <subNodes>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>None</maxDanger>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Idle error -->
+        <li Class="JobGiver_IdleError"/>
+    </subNodes>
+    </thinkRoot>
+    </ThinkTreeDef>
+
+
+
+
+
+
+
+
+
+
+    <ThinkTreeDef>
+      <defName>HalfMagConstant</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+          <!-- Despawned -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Despawned</treeDef>
+          </li>
+  
+          <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+            <subNodes>
+              <!-- Join auto joinable caravan -->
+              <li Class="ThinkNode_Subtree">
+                <treeDef>JoinAutoJoinableCaravan</treeDef>
+              </li>
+            </subNodes>
+          </li>
+  
+          <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+            <subNodes>
+              <!-- Lord directives -->
+              <li Class="ThinkNode_Subtree">
+                <treeDef>LordDutyConstant</treeDef>
+              </li>
+            </subNodes>
+          </li>
+        </subNodes>
+      </thinkRoot>
+    </ThinkTreeDef>
+
+
+
+</Defs>

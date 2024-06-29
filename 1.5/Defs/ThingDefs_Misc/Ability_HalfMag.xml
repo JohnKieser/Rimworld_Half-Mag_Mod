@@ -1,0 +1,32 @@
+
+<Defs>
+
+    <AbilityDef>
+    <defName>HalfMagDash</defName>    
+    <abilityClass>MCHF.HalfMagAbilityClass</abilityClass>
+    <iconPath>Things/Mote/HalfMagAbility_Icon/HalfMag_DashIcon</iconPath>
+    <hotKey>Misc1</hotKey>
+    <label>Dash</label>
+    <!-- the warm up sounds are taken directly from Project Nexus. 
+        they're really good to the point they fit super well with Rimworld  -->
+    <warmupStartSound>HalfMag_AbilityWarmUp_CastStart</warmupStartSound>
+    <warmupPreEndSound>HalfMag_AbilityWarmUp_CastEnd</warmupPreEndSound>
+    <warmupPreEndSoundSeconds>1.0</warmupPreEndSoundSeconds>
+    <cooldownTicksRange>1500~1501</cooldownTicksRange>
+    <aiCanUse>True</aiCanUse>
+    <verbProperties>
+      <verbClass>MCHF.Verb_DashDamage</verbClass>
+      <minRange>1.0</minRange>
+      <range>25.9</range>
+      <requireLineOfSight>False</requireLineOfSight>
+      <!-- maybe make this longer but keep in mind this also nerfs colony Half-Mags -->
+      <warmupTime>2.0</warmupTime>
+      <ai_IsWeapon>False</ai_IsWeapon>
+      <targetParams>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    </AbilityDef>
+</Defs>

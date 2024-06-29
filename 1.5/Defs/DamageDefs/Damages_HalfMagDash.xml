@@ -1,0 +1,26 @@
+
+<Defs>
+
+    
+
+    <DamageDef>
+        <defName>HalfMagDashDamage</defName>
+        <label>Half-Mag Dash</label>
+        <workerClass>DamageWorker_Blunt</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been ran over by a Half-Mag.</deathMessage>
+        <hediff>Crush</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Blunt</armorCategory>
+        <defaultDamage>20</defaultDamage>
+        <defaultArmorPenetration>0.35</defaultArmorPenetration>
+        <buildingDamageFactorImpassable>10</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>8</buildingDamageFactorPassable>    <!-- do not let this motherfucker in your base -->
+        <plantDamageFactor>5</plantDamageFactor>
+        <causeStun>false</causeStun>
+      </DamageDef>
+
+
+</Defs>

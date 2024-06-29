@@ -1,0 +1,19 @@
+<Defs>
+
+<IncidentDef>
+    <defName>SingleHalfMagAssault</defName>
+    <!-- couldn't come up with a better word than 'Rampage' to describe a single dude coming in like godzilla to wreck your wooden base  -->
+    <label>Half-Mag Rampage</label>
+    <category>Special</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>MCHF.IncidentWorker_SingleHalfMagAttack</workerClass>
+    <letterLabel>Half-Mag Rampage</letterLabel>
+    <letterText>A mass produced super soldier known as the Half-Mag has been sent by {FACTION_name} to assault your colony. Keep your distance and keep moving as it can quickly close the distance with a deadly dash ability.\n\nTry hiding behind walls as it readies its ability!</letterText>
+    <baseChance>0</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <minGreatestPopulation>1</minGreatestPopulation>
+  </IncidentDef>
+
+</Defs>
